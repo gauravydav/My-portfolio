@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
 export const fetchData = createAsyncThunk("data/fetchData", async () => {
-  const about = axios.get("http://localhost:5000/about");
+  const about = axios.get("http://my-portfolio-q1erag4bk-gauravydavs-projects.vercel.app/");
   const education = axios.get("http://localhost:5000/education");
   const projects = axios.get("http://localhost:5000/project");
   const experience = axios.get("http://localhost:5000/experience");
