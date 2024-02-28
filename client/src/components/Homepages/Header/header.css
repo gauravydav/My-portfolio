@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#tsparticles {
+  height: 360px;
+}
+
+.particles {
+  position: relative;
+  width: 100%;
+}
+
+.myname {
+  color: white;
+  position: absolute;
+  top: 4rem;
+  text-align: center;
+  left: 18%;
+  width: 65%;
+}
+
+.myname h1 {
+  color: gainsboro;
+  letter-spacing: 0.1rem;
+  font-style: italic;
+  text-shadow: 1px 1px 2px black, 0 0 1em rgb(21, 164, 221),
+    0 0 0.2rem rgb(17, 17, 17);
+}
+
+.personalInfo {
+  position: relative;
+  margin: 0 auto;
+  margin-top: -180px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.personalDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.personalInfo-container {
+  background-color: rgb(6, 6, 6);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.personal-content {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.content-1 {
+  margin: 0 auto;
+  width: max-content;
+}
+
+.content-1 h1 {
+  display: inline;
+  letter-spacing: 1px;
+  font-size: 34px;
+  color: yellow;
+  font-family: Helvetica;
+  overflow: ellipsis;
+}
+
+.content-1 .role {
+  color: #fff;
+  display: flex;
+  justify-content: flex-end;
+  font-family: "Lucida Sans";
+}
+
+.content-1 .role span {
+  padding: 4px 0;
+  font-size: 14px;
+  border-bottom: 1.5px solid green;
+  color: gainsboro;
+}
+
+.tag-line {
+  color: #fff;
+  text-align: center;
+  width: 80%;
+  margin: 20px auto 0 auto;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+
+.cv-btn-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.download-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 10px;
+  text-decoration: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #0056b3;
+}
+
+/* ------------- social icons -------------- */
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 20px;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+  color: #00aced; /* Change to your desired hover color */
+}
+
+.icon-linkedin:hover {
+  color: #0077b5; /* LinkedIn color */
+}
+
+.icon-github:hover {
+  color: #333; /* GitHub color */
+}
+
+.icon-twitter:hover {
+  color: #1da1f2; /* Twitter color */
+}
+
+.icon-instagram:hover {
+  color: #c13584; /* Instagram color */
+}
+
+/* ------------- social icons end-------------- */
+
+.my-img {
+  height: 100%;
+}
+
+.my-img img {
+  width: 100%;
+}
+
+@media (min-width: 664px) {
+  .myname {
+    top: 4rem;
+    width: 300px;
+    left: 30%;
+  }
+
+  .personalInfo {
+    max-width: 750px;
+    margin-top: -220px;
+  }
+
+  .content-1 h1 {
+    display: inline;
+    font-size: 65px;
+  }
+
+  .content-1 h5 {
+    font-size: 20px;
+  }
+
+  .content-1 .role span {
+    font-size: 20px;
+  }
+
+  .tag-line {
+    font-size: 24px;
+  }
+
+  .download-btn {
+    padding: 10px 15px;
+  }
+
+  .social-icons a {
+    font-size: 30px;
+    margin: 0 20px;
+  }
+
+  .my-img {
+    display: block;
+    align-self: center;
+  }
+}
+
+@media (min-width: 960px) {
+  .myname {
+    left: 45%;
+    width: auto;
+  }
+  .myname h1 {
+    font-size: 40px;
+    position: relative;
+    padding: 5px;
+  }
+
+  .personalInfo {
+    max-width: 900px;
+    width: 100%;
+    margin-top: -180px;
+  }
+
+  .personalDetails {
+    flex: 0 0 calc(64% - 10px);
+  }
+
+  .personal-content h1 {
+    font-size: 50px;
+  }
+  .tag-line {
+    color: gainsboro;
+    font-size: 18px;
+  }
+
+  .my-img {
+    flex: 0 0 calc(38% - 10px);
+    display: block;
+    align-self: center;
+    height: 100%;
+  }
+
+  .my-img img {
+    height: 100%;
+  }
+
+  .social-icons a{
+    margin-bottom: 10px;
+  }
+}

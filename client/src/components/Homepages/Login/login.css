@@ -1,0 +1,122 @@
+.login-body {
+  width: max-content;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 135px auto;
+ 
+}
+
+.login-container {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  width: 100%;
+}
+
+.login-container::before,
+.login-container::after {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.login-container::before {
+  top: -100px;
+  left: -100px;
+  background-color: #4caf50;
+  opacity: 0.2;
+}
+
+.login-container::after {
+  bottom: -100px;
+  right: -100px;
+  background-color: #ffa500;
+  opacity: 0.2;
+}
+
+.login-container h2 {
+  text-align: center;
+}
+
+.login-container label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(5px);
+}
+
+.login-container .button1 {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 4px;
+}
+
+.login-btns{
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.login-container .button1:hover {
+  background-color: #45a049;
+}
+
+.login-container .button2 {
+  background-color: blueviolet;
+  color: white;
+  padding: 10px 20px;
+  margin: 8px 0;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.login-container .button2:hover {
+  background-color: rgb(105, 105, 240);
+}
+
+.login-container .message {
+  text-align: center;
+  color: red;
+  margin-top: 10px;
+}
+
+@media (max-width: 476px) {
+.login-body{
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+}
+
+
+/* Responsive Styles */
+@media(min-width: 768px) {
+  .login-container {
+    width: 650px;
+  }
+
+}
