@@ -2,10 +2,10 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
 export const fetchData = createAsyncThunk("data/fetchData", async () => {
-  const about = axios.get("http://localhost:5000/about");
-  const education = axios.get("http://localhost:5000/education");
-  const projects = axios.get("http://localhost:5000/project");
-  const experience = axios.get("http://localhost:5000/experience");
+  const about = axios.get("https://my-portfolio-murex-sigma-32.vercel.app/about");
+  const education = axios.get("https://my-portfolio-murex-sigma-32.vercel.app/education");
+  const projects = axios.get("https://my-portfolio-murex-sigma-32.vercel.app/project");
+  const experience = axios.get("https://my-portfolio-murex-sigma-32.vercel.app/experience");
 
   const [aboutRes, educationRes, projectsRes, experienceRes] =
     await Promise.all([about, education, projects, experience]);
@@ -21,7 +21,7 @@ export const fetchData = createAsyncThunk("data/fetchData", async () => {
 export const checkLogin = createAsyncThunk("data/checkLogin", async () => {
   const token = localStorage.getItem("tokenStore");
   if (token) {
-    const verified = await axios.get("http://localhost:5000/user/verify", {
+    const verified = await axios.get("https://my-portfolio-murex-sigma-32.vercel.app/user/verify", {
       headers: { Authorization: token },
     });
     return verified.data;

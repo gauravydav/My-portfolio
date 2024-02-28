@@ -21,7 +21,7 @@ const Login = () => {
   const loginSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/user/login", {
+      const res = await axios.post("https://my-portfolio-murex-sigma-32.vercel.app/user/login", {
         email: user.email,
         password: user.password,
       });

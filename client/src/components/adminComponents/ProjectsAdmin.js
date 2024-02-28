@@ -40,7 +40,7 @@ const ProjectsAdmin = () => {
       formData.append("file", file);
 
       // Verify the endpoint for uploading the image:
-      const res = await axios.post("http://localhost:5000/upload", formData, {
+      const res = await axios.post("https://my-portfolio-murex-sigma-32.vercel.app/upload", formData, {
         headers: { "content-type": "multipart/form-data" },
       });
 
@@ -54,7 +54,7 @@ const ProjectsAdmin = () => {
 
   const handleDestroy = async () => {
     try {
-      await axios.post("http://localhost:5000/destroy", { public_id: images.public_id });
+      await axios.post("https://my-portfolio-murex-sigma-32.vercel.app/destroy", { public_id: images.public_id });
       setImages(false);
     } catch (error) {
       console.log(error.response.data.msg);
@@ -74,7 +74,7 @@ const ProjectsAdmin = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.post("http://localhost:5000/project", {
+      const res = await axios.post("https://my-portfolio-murex-sigma-32.vercel.app/project", {
         ...product,
         images,
       });
@@ -100,7 +100,7 @@ const ProjectsAdmin = () => {
 
   const fetchData = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/project");
+      const res = await axios.get("https://my-portfolio-murex-sigma-32.vercel.app/project");
       console.log(res.data);
       if (Array.isArray(res.data)) {
         setProjectData(res.data);
@@ -118,7 +118,7 @@ const ProjectsAdmin = () => {
 
   // delete functionality
   const deleteProject = (id) => {
-    axios.delete(`http://localhost:5000/project/${id}`).then((res) => {
+    axios.delete(`https://my-portfolio-murex-sigma-32.vercel.app/project/${id}`).then((res) => {
       setMessageCond(true);
       setMessage(res.data.msg);
 

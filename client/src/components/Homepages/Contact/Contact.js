@@ -13,7 +13,7 @@ const Contact = () => {
     const dataSend = { name, email, message }; // Simplify object creation
     try {
       const response = await axios.post(
-        "http://localhost:5000/email/sendEmail",
+        "https://my-portfolio-murex-sigma-32.vercel.app/email/sendEmail",
         dataSend,
         {
           headers: {
