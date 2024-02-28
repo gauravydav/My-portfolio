@@ -10,7 +10,8 @@ const app = express();
 
 // Middleware
 app.use(cors(
- { origin: "http://localhost:3002", }
+ { origin: "http://localhost:3002",
+ credentials:true }
 ));
 
 app.use(express.json());
@@ -48,6 +49,13 @@ app.use((err, req, res, next) => {
   res.status(500).json({
     error: "Internal Server Error",
   });
+});
+//--------------------CORS Handling--------------------
+app.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "https://bapu-portfolio.onrender.com, https://bapu12-portfolio.vercel.app");
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  next();
 });
 
 
