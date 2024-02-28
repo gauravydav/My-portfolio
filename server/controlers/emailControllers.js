@@ -95,7 +95,7 @@ const sendEmail = expressAsyncHandler(async (req, res) => {
         <p>I would appreciate some suggestions/advice regarding...</p>
       </div>
       <div class="footer">
-        <p>Best regards,<br>Bapu</p>
+        <p>Best regards,<br>Gaurav</p>
       </div>
     </div>
   </body>
